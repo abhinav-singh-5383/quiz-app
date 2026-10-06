@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App | CodeCrafters Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar" style="position: static;">
+    <div class="nav-container">
+      <a href="https://GIRIJA-alt-2705.github.io/Agency-Portfolio/" class="nav-logo">
+        <div class="logo-icon"><span class="logo-bracket">&lt;</span>CC<span class="logo-bracket">/&gt;</span></div>
+        <span class="logo-text">CodeCrafters</span>
+      </a>
+      <a href="https://GIRIJA-alt-2705.github.io/Agency-Portfolio/#projects" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.85rem;">← Back to Portfolio</a>
+    </div>
+  </nav>
+
+  <main class="quiz-container">
+    <div class="quiz-card" id="quiz-card">
+      
+      <!-- Start Screen -->
+      <div id="start-screen" class="screen active">
+        <h1>Web Development Quiz</h1>
+        <p>Test your knowledge of HTML, CSS, and JavaScript. The quiz contains 5 questions.</p>
+        <button id="start-btn" class="btn btn-primary btn-full">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="screen">
+        <div class="quiz-header">
+          <div class="quiz-progress-text">
+            <span>Question <span id="current-q-num">1</span> of <span id="total-q-num">5</span></span>
+            <span id="score-text">Score: 0</span>
+          </div>
+          <div class="quiz-progress-bar-bg">
+            <div id="quiz-progress-bar" class="quiz-progress-bar"></div>
+          </div>
+        </div>
+
+        <h2 id="question-text" class="question-text">Question goes here?</h2>
+        
+        <div id="options-container" class="options-container">
+          <!-- Options rendered here -->
+        </div>
+
+        <div class="quiz-footer">
+          <p id="feedback-text" class="feedback-text"></p>
+          <button id="next-btn" class="btn btn-primary" style="display: none;">Next Question</button>
+        </div>
+      </div>
+
+      <!-- Results Screen -->
+      <div id="results-screen" class="screen">
+        <h2>Quiz Complete!</h2>
+        <div class="score-circle">
+          <span id="final-percentage">0%</span>
+        </div>
+        <p class="score-summary">You scored <strong id="final-score">0</strong> out of <strong id="max-score">5</strong>.</p>
+        <button id="restart-btn" class="btn btn-primary btn-full">Retake Quiz</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
